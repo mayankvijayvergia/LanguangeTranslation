@@ -3,12 +3,13 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_groq import ChatGroq
 import os
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 # Load .env variables
-# load_dotenv()
+load_dotenv()
 
-groq_api_key = "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"
+# Groq API Key
+groq_api_key = os.getenv("GROQ_API_KEY")
 
 
 # Initialize model
